@@ -1,0 +1,17 @@
+{
+  "name": "Nick vs. Bus",
+  "description": "Beat down as many foam sword foes as you can while avoiding white and green buses!",
+  "version": "0.2.5",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "permissions": [
+    "unlimitedStorage",
+    "notifications"
+  ]
+}
