@@ -25,6 +25,7 @@
 CanvasRenderingContext2D.prototype.roundRect = (x, y, w, h, r) ->
 	r = w / 2 if (w < 2 * r)
 	r = h / 2 if (h < 2 * r)
+	r = 1 if r == 0 # fix for opera
 	this.beginPath()
 	this.moveTo(x+r, y)
 	this.arcTo(x+w, y,   x+w, y+h, r)

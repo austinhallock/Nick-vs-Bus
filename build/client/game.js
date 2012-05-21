@@ -32,6 +32,7 @@
 CanvasRenderingContext2D.prototype.roundRect = function(x, y, w, h, r) {
   if (w < 2 * r) r = w / 2;
   if (h < 2 * r) r = h / 2;
+  if (r === 0) r = 1;
   this.beginPath();
   this.moveTo(x + r, y);
   this.arcTo(x + w, y, x + w, y + h, r);
@@ -1657,12 +1658,6 @@ NickVsBus = (function(_super) {
     this.ctx.fillText(msg, 15, 25);
     if (window.innerWidth > 500 && false) this.ctx.strokeText(msg, 15, 25);
     this.ctx.textAlign = 'right';
-    /*
-    		time = new Date().getTime()
-    		@zzz = (time-@last) if !( time % 10 )
-    		if !@zzz
-    			@zzz = 0
-    */
     msg = "Time: " + this.time;
     this.ctx.fillText(msg, this.width - 15, 25);
     if (window.innerWidth > 500 && false) {

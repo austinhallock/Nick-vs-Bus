@@ -204,12 +204,7 @@ class NickVsBus extends Scene
 			@ctx.strokeText(msg, 15, 25)
 		
 		@ctx.textAlign = 'right'
-		###
-		time = new Date().getTime()
-		@zzz = (time-@last) if !( time % 10 )
-		if !@zzz
-			@zzz = 0
-		###
+
 		msg = "Time: " + @time
 		@ctx.fillText(msg, @width - 15, 25)
 		if window.innerWidth > 500 && false
